@@ -1,0 +1,30 @@
+.main {
+    font-family: arial, sans-serif;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    background: lightblue;
+    padding: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    background: white;
+    border-radius: 8px;
+    margin: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    background: no-repeat 50%;
+}
+
+.card:hover {
+    border: 2px solid blue;
+}
