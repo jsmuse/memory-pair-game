@@ -1,17 +1,12 @@
 .main {
     font-family: arial, sans-serif;
-    max-width: 860px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
     background: lightblue;
     padding: 30px;
-}
-
-.row {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex: 0 0 100%;
+    flex-wrap: wrap;
 }
 
 .card {

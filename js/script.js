@@ -31,20 +31,8 @@ function Shuffle(o) {
     return o;
 }
 
-function formatArray(array) {
-    return [array.slice(0, 4), array.slice(4, 8), array.slice(8, 13)];
-}
+const main = document.getElementById('main');
 
-function addImgToCard(rowNum, item) {
-    for (var i = 0; i < item.length; i++) {
-        rowNum.getElementsByTagName('*')[i].style.backgroundImage = `url('${data.find((x) => x.id === item[i]).img}')`;
-    }
-}
-
-const rowFirst = document.getElementById('row1');
-const rowSecond = document.getElementById('row2');
-const rowThird = document.getElementById('row3');
-const rows = [rowFirst, rowSecond, rowThird];
 let arrayOfIds = [];
 
 data.map((item) => {
@@ -52,11 +40,10 @@ data.map((item) => {
     arrayOfIds.push(item.id);
 });
 
-arrayOfIds = formatArray(Shuffle(arrayOfIds));
+Shuffle(arrayOfIds);
 
-// add pic on card
 arrayOfIds.map((item, index) => {
-    addImgToCard(rows[index], item);
+    main.getElementsByTagName('*')[index].style.backgroundImage = `url('${data.find((x) => x.id === item).img}')`;
 });
 
 /*const data = [
